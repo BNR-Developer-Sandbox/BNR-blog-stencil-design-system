@@ -6,56 +6,58 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface DsForm {
+    }
+    interface DsHero {
+    }
+    interface DsShell {
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLDsFormElement extends Components.DsForm, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLDsFormElement: {
+        prototype: HTMLDsFormElement;
+        new (): HTMLDsFormElement;
+    };
+    interface HTMLDsHeroElement extends Components.DsHero, HTMLStencilElement {
+    }
+    var HTMLDsHeroElement: {
+        prototype: HTMLDsHeroElement;
+        new (): HTMLDsHeroElement;
+    };
+    interface HTMLDsShellElement extends Components.DsShell, HTMLStencilElement {
+    }
+    var HTMLDsShellElement: {
+        prototype: HTMLDsShellElement;
+        new (): HTMLDsShellElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
+        "ds-form": HTMLDsFormElement;
+        "ds-hero": HTMLDsHeroElement;
+        "ds-shell": HTMLDsShellElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface DsForm {
+    }
+    interface DsHero {
+    }
+    interface DsShell {
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
+        "ds-form": DsForm;
+        "ds-hero": DsHero;
+        "ds-shell": DsShell;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "ds-form": LocalJSX.DsForm & JSXBase.HTMLAttributes<HTMLDsFormElement>;
+            "ds-hero": LocalJSX.DsHero & JSXBase.HTMLAttributes<HTMLDsHeroElement>;
+            "ds-shell": LocalJSX.DsShell & JSXBase.HTMLAttributes<HTMLDsShellElement>;
         }
     }
 }
