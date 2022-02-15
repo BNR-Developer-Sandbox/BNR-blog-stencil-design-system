@@ -7,12 +7,41 @@
 
     <script type="module" src="/build/design-system.esm.js"></script>
     <script nomodule src="/build/design-system.js"></script>
+    <style type="text/css">
+      :root {
+        /* CSS Variables for theming white-labeled components */
+        --primary-color: red;
+        --secondary-color: gold;
+        --tertiary-color: green;
+      }
+
+      body {
+        margin: 0;
+        background-color: var(--tertiary-color);
+      }
+    </style>
   </head>
   <body>
     <ds-shell>
+      <h1 slot="top">App Name</h1>
       <ds-hero>
-        <ds-form> Hello, World! </ds-form>
+        <ds-form>
+          <label>
+            Your Name:
+            <br />
+            <input type="text" name="name" />
+          </label>
+          <br />
+          <slot slot="submit">
+            <input type="submit" value="Say Hello" />
+          </slot>
+        </ds-form>
       </ds-hero>
+      <slot slot="bottom">
+        <span>1</span>
+        <span>2</span>
+        <span>3</span>
+      </slot>
     </ds-shell>
   </body>
 </html>

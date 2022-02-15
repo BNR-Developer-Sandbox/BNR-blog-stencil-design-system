@@ -6,13 +6,14 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class DsForm {
-
   render() {
     return (
       <Host>
-        <slot></slot>
+        <form>
+          <slot></slot>
+          <slot name="submit"></slot>
+        </form>
       </Host>
     );
   }
-
 }
