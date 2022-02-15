@@ -8,6 +8,7 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "design-system": "file:../design-system/dist/components",
     "vue": "^3.2.29",
     "vue-router": "^4.0.12"
   },
