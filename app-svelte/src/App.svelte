@@ -6,7 +6,7 @@
 </script>
 
 <ds-shell>
-	<h1 slot="top">{appName}</h1>
+	<h1 slot="header">{appName}</h1>
 	<ds-hero>
 		<ds-form>
 			<label>
@@ -20,9 +20,9 @@
 			</slot>
 		</ds-form>
 	</ds-hero>
-	<slot slot="bottom">
+	<span slot="footer">
 		<span>1</span>
 		<span>2</span>
 		<span>3</span>
-	</slot>
+	</span>
 </ds-shell>

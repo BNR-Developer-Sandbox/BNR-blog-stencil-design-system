@@ -12,7 +12,7 @@ export class AppRoot {
   render() {
     return (
       <ds-shell>
-        <h1 slot="top">Stencil App</h1>
+        <h1 slot="header">Stencil App</h1>
         <ds-hero>
           <ds-form>
             <label>
@@ -26,11 +26,11 @@ export class AppRoot {
             </slot>
           </ds-form>
         </ds-hero>
-        <slot slot="bottom">
+        <span slot="footer">
           <span>1</span>
           <span>2</span>
           <span>3</span>
-        </slot>
+        </span>
       </ds-shell>
     );
   }

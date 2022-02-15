@@ -6,7 +6,7 @@ import "design-system/ds-form";
 
 <template>
   <ds-shell>
-    <h1 slot="top">Vue App</h1>
+    <h1 slot="header">Vue App</h1>
     <ds-hero>
       <ds-form>
         <label>
@@ -20,11 +20,11 @@ import "design-system/ds-form";
         </slot>
       </ds-form>
     </ds-hero>
-    <slot slot="bottom">
+    <span slot="footer">
       <span>1</span>
       <span>2</span>
       <span>3</span>
-    </slot>
+    </span>
   </ds-shell>
 </template>
 

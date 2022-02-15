@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-[name='top'] {
+header ::slotted(*) {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +13,7 @@
   background-color: var(--secondary-color);
 }
 
-[name='bottom'] {
+footer ::slotted(*) {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
