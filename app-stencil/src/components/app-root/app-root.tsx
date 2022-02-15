@@ -1,4 +1,11 @@
 import { Component, h } from '@stencil/core';
+import { DsShell } from 'design-system/dist/components/ds-shell'
+import { DsHero } from 'design-system/dist/components/ds-hero'
+import { DsForm } from 'design-system/dist/components/ds-form'
+
+console.log('Design DsShell\n:', DsShell)
+console.log('Design DsHero\n:', DsHero)
+console.log('Design DsForm\n:', DsForm)
 
 @Component({
   tag: 'app-root',
@@ -8,20 +15,27 @@ import { Component, h } from '@stencil/core';
 export class AppRoot {
   render() {
     return (
-      <div>
-        <header>
-          <h1>Stencil App Starter</h1>
-        </header>
-
-        <main>
-          <stencil-router>
-            <stencil-route-switch scrollTopOffset={0}>
-              <stencil-route url="/" component="app-home" exact={true} />
-              <stencil-route url="/profile/:name" component="app-profile" />
-            </stencil-route-switch>
-          </stencil-router>
-        </main>
-      </div>
+      <ds-shell>
+        <h1 slot="top">Stencil App</h1>
+        <ds-hero>
+          <ds-form>
+            <label>
+              Your Expertise:
+              <br />
+              <input type="text" name="expertise" />
+            </label>
+            <br />
+            <slot slot="submit">
+              <input type="submit" value="Say Something" />
+            </slot>
+          </ds-form>
+        </ds-hero>
+        <slot slot="bottom">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+        </slot>
+      </ds-shell>
     );
   }
 }

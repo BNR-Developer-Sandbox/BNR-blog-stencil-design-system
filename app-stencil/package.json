@@ -10,6 +10,9 @@
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate"
   },
+  "dependencies": {
+    "design-system": "file:../design-system"
+  },
   "devDependencies": {
     "@stencil/core": "^2.13.0",
     "@stencil/router": "^1.0.1",
