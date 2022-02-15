@@ -1,11 +1,7 @@
 import { Component, h } from '@stencil/core';
-import { DsShell } from 'design-system/dist/components/ds-shell'
-import { DsHero } from 'design-system/dist/components/ds-hero'
-import { DsForm } from 'design-system/dist/components/ds-form'
-
-console.log('Design DsShell\n:', DsShell)
-console.log('Design DsHero\n:', DsHero)
-console.log('Design DsForm\n:', DsForm)
+import 'design-system/dist/components/ds-shell';
+import 'design-system/dist/components/ds-hero';
+import 'design-system/dist/components/ds-form';
 
 @Component({
   tag: 'app-root',

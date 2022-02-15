@@ -9,7 +9,7 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
-      autoDefineCustomElements: true
+      autoDefineCustomElements: true,
     },
     {
       type: 'docs-readme',
