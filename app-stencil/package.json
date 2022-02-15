@@ -11,7 +11,7 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "design-system": "file:../design-system"
+    "design-system": "file:../design-system/dist/components"
   },
   "devDependencies": {
     "@stencil/core": "^2.13.0",

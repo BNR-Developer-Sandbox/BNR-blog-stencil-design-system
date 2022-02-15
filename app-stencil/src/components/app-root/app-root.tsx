@@ -1,7 +1,7 @@
 import { Component, h } from '@stencil/core';
-import 'design-system/dist/components/ds-shell';
-import 'design-system/dist/components/ds-hero';
-import 'design-system/dist/components/ds-form';
+import 'design-system/ds-shell';
+import 'design-system/ds-hero';
+import 'design-system/ds-form';
 
 @Component({
   tag: 'app-root',
