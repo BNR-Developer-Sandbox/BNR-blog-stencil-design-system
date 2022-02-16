@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-header ::slotted(*) {
+header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,13 +13,19 @@ header ::slotted(*) {
   background-color: var(--secondary-color);
 }
 
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+  color: var(--secondary-color);
+  background-color: var(--tertiary-color);
+}
+
 footer ::slotted(*) {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
   height: auto;
-  padding: 4rem 0;
-  color: var(--secondary-color);
-  background-color: var(--tertiary-color);
 }
