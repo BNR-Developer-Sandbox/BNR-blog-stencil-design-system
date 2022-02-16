@@ -2,10 +2,11 @@ import "design-system/ds-shell";
 import "design-system/ds-hero";
 import "design-system/ds-form";
 
-function handleSubmitted(event) {
+function handleFormData(event) {
   event.stopPropagation();
-  const { detail } = event;
-  const { reaction } = detail;
+  const { formData } = event;
+  const data = Object.fromEntries(formData);
+  const { reaction } = data;
   alert(`I'm surprised that you reacted ${reaction}.`);
 }
 
@@ -14,7 +15,7 @@ function App() {
     <ds-shell>
       <h1 slot="header">React App</h1>
       <ds-hero>
-        <ds-form onsubmitted={(event) => handleSubmitted(event)}>
+        <ds-form onformdata={(event) => handleFormData(event)}>
           <label>
             How did you react?:
             <br />

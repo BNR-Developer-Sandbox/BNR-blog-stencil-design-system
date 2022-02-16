@@ -1,4 +1,4 @@
-import { Component, Element, Event, EventEmitter, Host, State, h } from '@stencil/core';
+import { Component, Element, Host, State, h } from '@stencil/core';
 
 @Component({
   tag: 'ds-form',
@@ -8,13 +8,6 @@ import { Component, Element, Event, EventEmitter, Host, State, h } from '@stenci
 export class DsForm {
   @Element() el: HTMLElement;
   @State() data: any = {};
-  @Event({
-    eventName: 'submitted',
-    composed: true,
-    cancelable: true,
-    bubbles: true,
-  })
-  submittedEvent: EventEmitter;
   onInput(event) {
     const { name, value } = event.target;
     this.data[name] = value;
@@ -25,14 +18,6 @@ export class DsForm {
   }
   onClick(event) {
     if (event?.target?.type === 'submit') {
-      // submitted event
-      this.submittedEvent.emit(this.data);
-
-      // submit event
-      const submitEvent = new SubmitEvent('submit');
-      this.el.dispatchEvent(submitEvent);
-
-      // formdata event
       const formData = new FormData();
       Object.entries(this.data).forEach(([key, value]) => {
         formData.append(key, String(value));

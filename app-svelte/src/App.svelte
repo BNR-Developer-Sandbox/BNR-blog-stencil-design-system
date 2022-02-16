@@ -1,5 +1,5 @@
 <script>
-	export let appName, fieldLabel, fieldName, submitLabel, handleSubmitted;
+	export let appName, fieldLabel, fieldName, submitLabel, handleFormData;
 	import 'design-system/ds-shell';
 	import 'design-system/ds-hero';
 	import 'design-system/ds-form';
@@ -8,7 +8,7 @@
 <ds-shell>
 	<h1 slot="header">{appName}</h1>
 	<ds-hero>
-		<ds-form on:submitted={handleSubmitted}>
+		<ds-form on:formdata={handleFormData}>
 			<label>
 				{fieldLabel}:
 				<br />

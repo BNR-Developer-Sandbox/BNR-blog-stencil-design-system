@@ -7,10 +7,11 @@ const app = new App({
     fieldLabel: "Your Location",
     fieldName: "location",
     submitLabel: "Where you at?",
-    handleSubmitted: (event) => {
+    handleFormData: (event) => {
       event.stopPropagation();
-      const { detail } = event;
-      const { location } = detail;
+      const { formData } = event;
+      const data = Object.fromEntries(formData);
+      const { location } = data;
       alert(`Where's ${location}?`);
     },
   },

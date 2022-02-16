@@ -52,19 +52,6 @@
 
     <script>
       const form = document.getElementsByTagName('ds-form')[0];
-
-      // custom event emitted from ds-form
-      form.addEventListener('submitted', event => {
-        const { name, expertise } = event.detail;
-        alert(`Hello ${name}, I hear you are good at ${expertise}.`);
-      });
-
-      // submit event, but no data available
-      form.addEventListener('submit', event => {
-        console.log('addEventListener', 'submit', 'event', event);
-      });
-
-      // formdata event with formData
       form.addEventListener('formdata', event => {
         const { formData } = event;
         const data = Object.fromEntries(formData);

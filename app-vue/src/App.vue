@@ -3,10 +3,11 @@ import "design-system/ds-shell";
 import "design-system/ds-hero";
 import "design-system/ds-form";
 
-function handleSubmitted(event) {
+function handleFormData(event) {
   event.stopPropagation();
-  const { detail } = event;
-  const { view } = detail;
+  const { formData } = event;
+  const data = Object.fromEntries(formData);
+  const { view } = data;
   alert(`${view}!?! Wow! What a view!`);
 }
 </script>
@@ -15,7 +16,7 @@ function handleSubmitted(event) {
   <ds-shell>
     <h1 slot="header">Vue App</h1>
     <ds-hero>
-      <ds-form @submitted="handleSubmitted">
+      <ds-form @formdata="handleFormData">
         <label>
           How's the view?:
           <br />
