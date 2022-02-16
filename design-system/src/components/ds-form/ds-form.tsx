@@ -1,4 +1,4 @@
-import { Component, Event, EventEmitter, Host, State, h, Element } from '@stencil/core';
+import { Component, Event, EventEmitter, Host, State, h } from '@stencil/core';
 
 @Component({
   tag: 'ds-form',
@@ -6,15 +6,14 @@ import { Component, Event, EventEmitter, Host, State, h, Element } from '@stenci
   shadow: true,
 })
 export class DsForm {
-  @Element() el;
   @State() data: any = {};
   @Event({
-    eventName: 'submit',
+    eventName: 'submitted',
     composed: true,
     cancelable: true,
     bubbles: true,
   })
-  submit: EventEmitter;
+  submittedEvent: EventEmitter;
   onInput(event) {
     const { name, value } = event.target;
     this.data[name] = value;
@@ -25,12 +24,8 @@ export class DsForm {
   }
   onClick(event) {
     if (event?.target?.type === 'submit') {
-      this.submit.emit(this.data);
-      const form = this.el.shadowRoot.querySelector('form');
-      form.requestSubmit(form);
-      console.log('emitted', this.data)
+      this.submittedEvent.emit(this.data);
     }
-    console.log('outside emitted', this.data)
   }
   render() {
     return (

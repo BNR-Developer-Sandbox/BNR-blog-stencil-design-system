@@ -7,9 +7,9 @@
 
 ## Events
 
-| Event    | Description | Type               |
-| -------- | ----------- | ------------------ |
-| `submit` |             | `CustomEvent<any>` |
+| Event       | Description | Type               |
+| ----------- | ----------- | ------------------ |
+| `submitted` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------

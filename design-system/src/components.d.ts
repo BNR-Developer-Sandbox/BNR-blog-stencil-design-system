@@ -40,7 +40,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface DsForm {
-        "onSubmit"?: (event: CustomEvent<any>) => void;
+        "onSubmitted"?: (event: CustomEvent<any>) => void;
     }
     interface DsHero {
     }
