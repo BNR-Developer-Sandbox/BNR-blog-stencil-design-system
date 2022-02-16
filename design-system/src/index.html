@@ -32,6 +32,12 @@
             <input type="text" name="name" />
           </label>
           <br />
+          <label>
+            Your Expertise:
+            <br />
+            <input type="text" name="expertise" />
+          </label>
+          <br />
           <slot slot="submit">
             <input type="submit" value="Say Hello" />
           </slot>
@@ -43,5 +49,14 @@
         <span>3</span>
       </span>
     </ds-shell>
+
+    <script>
+      const form = document.getElementsByTagName('ds-form')[0];
+      const sayHello = event => {
+        const { name, expertise } = event.detail;
+        alert(`Hello ${name}, I hear you are good at ${expertise}.`);
+      };
+      form.addEventListener('onsubmit', sayHello);
+    </script>
   </body>
 </html>
