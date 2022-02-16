@@ -2,12 +2,19 @@ import "design-system/ds-shell";
 import "design-system/ds-hero";
 import "design-system/ds-form";
 
+function handleReaction(event) {
+  event.stopPropagation();
+  const { detail } = event;
+  const { reaction } = detail;
+  alert(`I'm surprised that you reacted ${reaction}.`);
+}
+
 function App() {
   return (
     <ds-shell>
       <h1 slot="header">React App</h1>
       <ds-hero>
-        <ds-form>
+        <ds-form onsubmitted={(event) => handleReaction(event)}>
           <label>
             How did you react?:
             <br />
@@ -15,7 +22,7 @@ function App() {
           </label>
           <br />
           <slot slot="submit">
-            <input type="submit" value="???" />
+            <input type="submit" value="What's your reaction?" />
           </slot>
         </ds-form>
       </ds-hero>
