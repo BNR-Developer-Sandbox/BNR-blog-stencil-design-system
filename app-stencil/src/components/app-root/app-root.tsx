@@ -9,7 +9,7 @@ import 'design-system/ds-form';
   shadow: true,
 })
 export class AppRoot {
-  saySomething(event) {
+  handleSubmitted(event) {
     event.stopPropagation();
     const { detail } = event;
     const { expertise } = detail;
@@ -20,7 +20,7 @@ export class AppRoot {
       <ds-shell>
         <h1 slot="header">Stencil App</h1>
         <ds-hero>
-          <ds-form onSubmitted={event => this.saySomething(event)}>
+          <ds-form onSubmitted={event => this.handleSubmitted(event)}>
             <label>
               Your Expertise:
               <br />
