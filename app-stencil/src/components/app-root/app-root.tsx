@@ -14,7 +14,7 @@ export class AppRoot {
       <ds-shell>
         <h1 slot="header">Stencil App</h1>
         <ds-hero>
-          <ds-form>
+          <ds-form onSubmit={(e) => console.log(e)}>
             <label>
               Your Expertise:
               <br />
