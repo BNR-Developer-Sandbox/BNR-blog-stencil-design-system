@@ -51,13 +51,16 @@
     </ds-shell>
 
     <script>
-      const form = document.getElementsByTagName('ds-form')[0];
-      form.addEventListener('formdata', event => {
+      function handleFormData(event) {
+        event.stopPropagation();
         const { formData } = event;
         const data = Object.fromEntries(formData);
         const { name, expertise } = data;
         alert(`Hello ${name}, I hear you are good at ${expertise}.`);
-      });
+      }
+
+      const form = document.getElementsByTagName('ds-form')[0];
+      form.addEventListener('formdata', event => handleFormData(event));
     </script>
   </body>
 </html>
