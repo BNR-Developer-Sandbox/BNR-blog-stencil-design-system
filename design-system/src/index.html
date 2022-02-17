@@ -10,9 +10,9 @@
     <style type="text/css">
       :root {
         /* CSS Variables for theming white-labeled components */
-        --primary-color: red;
-        --secondary-color: gold;
-        --tertiary-color: green;
+        --primary-color: #000000;
+        --secondary-color: #f4f4ff;
+        --tertiary-color: #4c48ff;
       }
 
       body {
@@ -38,9 +38,7 @@
             <input type="text" name="expertise" />
           </label>
           <br />
-          <slot slot="submit">
-            <input type="submit" value="Say Hello" />
-          </slot>
+          <input type="submit" value="Say Hello" />
         </ds-form>
       </ds-hero>
       <span slot="footer">

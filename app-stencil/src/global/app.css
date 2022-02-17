@@ -1,8 +1,8 @@
 :root {
   /* CSS Variables for theming white-labeled components */
-  --primary-color: #4cc0ee;
-  --secondary-color: #7b0fe1;
-  --tertiary-color: #ff9e3c;
+  --primary-color: #4c48ff;
+  --secondary-color: #f4f4ff;
+  --tertiary-color: #000000;
 }
 
 body {
