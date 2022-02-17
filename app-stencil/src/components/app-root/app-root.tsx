@@ -28,9 +28,7 @@ export class AppRoot {
               <input type="text" name="expertise" />
             </label>
             <br />
-            <slot slot="submit">
-              <input type="submit" value="Say Something" />
-            </slot>
+            <input type="submit" value="Say Something" />
           </ds-form>
         </ds-hero>
         <span slot="footer">

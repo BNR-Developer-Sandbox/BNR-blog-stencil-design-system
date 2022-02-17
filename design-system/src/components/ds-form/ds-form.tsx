@@ -36,7 +36,6 @@ export class DsForm {
           onClick={event => this.onClick(event)}
         >
           <slot></slot>
-          <slot name="submit"></slot>
         </form>
       </Host>
     );
