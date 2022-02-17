@@ -15,9 +15,7 @@
 				<input type="text" name="{fieldName}" />
 			</label>
 			<br />
-			<slot slot="submit">
-				<input type="submit" value="{submitLabel}" />
-			</slot>
+			<input type="submit" value="{submitLabel}" />
 		</ds-form>
 	</ds-hero>
 	<span slot="footer">

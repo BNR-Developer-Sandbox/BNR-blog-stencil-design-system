@@ -23,9 +23,7 @@ function handleFormData(event) {
           <input type="text" name="view" />
         </label>
         <br />
-        <slot slot="submit">
-          <input type="submit" value="Looking good?" />
-        </slot>
+        <input type="submit" value="Looking good?" />
       </ds-form>
     </ds-hero>
     <span slot="footer">

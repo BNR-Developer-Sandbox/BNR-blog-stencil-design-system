@@ -22,9 +22,7 @@ function App() {
             <input type="text" name="reaction" />
           </label>
           <br />
-          <slot slot="submit">
-            <input type="submit" value="What's your reaction?" />
-          </slot>
+          <input type="submit" value="What's your reaction?" />
         </ds-form>
       </ds-hero>
       <span slot="footer">
